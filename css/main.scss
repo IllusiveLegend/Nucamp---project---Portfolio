@@ -1,0 +1,231 @@
+
+//sassy variables
+$color-primary: #37afa9;
+$color-secondary: #2d8e87;
+$color-white: #0c695d;
+$color-mid: #e0f2f2;
+$color-dark: #152329;
+$color-warning: #ffcc00;
+$color-black-transparent: rgba(43, 123, 147, 0.4);
+
+$body-font: "Open Sans", sans-serif;
+$header-font: "Lobster", cursive;
+
+$color-h4-prime: rgba(0, 0, 0, 0.5);
+
+
+/* Navbar Style */
+.navbar{
+    background: $color-primary;
+}
+.nav-link , .navbar-brand{
+    color: $color-mid;
+    cursor: pointer;
+}
+.nav-link{
+    margin-right: 1em !important;
+}
+.nav-link:hover{
+    background: #f4f4f4;
+    color: slategrey;
+}
+.navbar-collapse{
+    justify-content: flex-end;
+}
+.navbar-toggler{
+    background-color: #fff !important;
+}
+
+/* Header Style */
+.header{
+    background-image: url('/images/header-bg-web-dev.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+.description{
+    position: absolute;
+    margin: auto;
+    padding: 2em;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1055;
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    outline: 0;
+  }
+  
+  .modal-dialog {
+    position: relative;
+    width: auto;
+    margin: 0.5rem;
+    pointer-events: none;
+  }
+  .modal.fade .modal-dialog {
+    transition: transform 0.3s ease-out;
+    transform: translate(0, -50px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .modal.fade .modal-dialog {
+      transition: none;
+    }
+  }
+  .modal.show .modal-dialog {
+    transform: none;
+  }
+  .modal.modal-static .modal-dialog {
+    transform: scale(1.02);
+  }
+  
+  .modal-dialog-scrollable {
+    height: calc(100% - 1rem);
+  }
+  .modal-dialog-scrollable .modal-content {
+    max-height: 100%;
+    overflow: hidden;
+  }
+  .modal-dialog-scrollable .modal-body {
+    overflow-y: auto;
+  }
+  
+  .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+  }
+  
+  .modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0.3rem;
+    outline: 0;
+  }
+  
+  .modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+  }
+  .modal-backdrop.fade {
+    opacity: 0;
+  }
+  .modal-backdrop.show {
+    opacity: 0.5;
+  }
+  
+  .modal-header {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: calc(0.3rem - 1px);
+    border-top-right-radius: calc(0.3rem - 1px);
+  }
+  .modal-header .btn-close {
+    padding: 0.5rem 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+  }
+  
+  .modal-title {
+    margin-bottom: 0;
+    line-height: 1.5;
+    background-color: $color-secondary;
+  }
+  
+  .modal-body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+  
+  .modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(0.3rem - 1px);
+    border-bottom-left-radius: calc(0.3rem - 1px);
+  }
+  .modal-footer > * {
+    margin: 0.25rem;
+  }
+  
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 500px;
+      margin: 1.75rem auto;
+    }
+  
+    .modal-dialog-scrollable {
+      height: calc(100% - 3.5rem);
+    }
+  
+    .modal-dialog-centered {
+      min-height: calc(100% - 3.5rem);
+    }
+  
+    .modal-sm {
+      max-width: 300px;
+    }
+
+}
+
+body{
+    color: $color-primary;
+    font-family: $body-font;
+}
+
+.card-header{
+    background-color: $color-secondary;
+}
+
+#myModal{
+  h4{
+    color:$color-secondary
+  }
+}
+
+i{
+  background-color: $color-warning;
+}
+
+
+// Carousel
+.carousel{
+  border: solid black;
+}
+
+.carousel-caption{
+  background-color: rgba(0, 0, 0, .5);
+}
+
+#carouselButton{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
